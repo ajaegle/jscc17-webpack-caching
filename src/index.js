@@ -1,2 +1,3 @@
 import fooString from "./foo"
-console.log(fooString);
+import barString from "./bar-cjs"
+console.log(fooString, barString);
