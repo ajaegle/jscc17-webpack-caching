@@ -1,1 +1,2 @@
-console.log("hahaha");
+import fooString from "./foo"
+console.log(fooString);
