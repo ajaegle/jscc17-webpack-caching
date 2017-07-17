@@ -2,5 +2,11 @@
   "name": "webpack-sample",
   "version": "1.0.0",
   "main": "dist/index.js",
-  "license": "MIT"
+  "license": "MIT",
+  "scripts": {
+    "build": "webpack"
+  },
+  "devDependencies": {
+    "webpack": "^3.3.0"
+  }
 }
