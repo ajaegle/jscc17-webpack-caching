@@ -5,5 +5,5 @@ import {appendImageTo} from "./imageappender";
 
 console.log(fooString, barString);
 
-appendImageTo(".content");
-appendImageTo(".content");
+const button = document.querySelector("button#add");
+button.addEventListener("click", () => appendImageTo(".content"));
