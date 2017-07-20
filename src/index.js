@@ -1,10 +1,9 @@
 import fooString from "./foo";
 import barString from "./bar-cjs";
-import imagename from "./webpack.jpg";
+
+import {appendImageTo} from "./imageappender";
+
 console.log(fooString, barString);
 
-const image = document.createElement("img");
-image.src = imagename;
-
-const contentTarget = document.querySelector(".content");
-contentTarget.appendChild(image);
+appendImageTo(".content");
+appendImageTo(".content");
