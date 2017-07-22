@@ -1,13 +1,14 @@
 const path = require("path");
+const webpack = require("webpack");
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
   entry: {
     main: "./src/index.js",
-    second: "./src/second.js"
+    vendor: "rxjs"
   },
   output: {
-    filename: "[name]-[hash].js",
+    filename: "[name]-[chunkhash].js",
     path: path.join(__dirname, "dist")
   },
   module: {
@@ -18,7 +19,12 @@ module.exports = {
       }
     ]
   },
-  plugins: [new HtmlWebpackPlugin({
+  plugins: [
+    new HtmlWebpackPlugin({
     template: 'src/index-template.html'
-  })]
+  }),
+  new webpack.optimize.CommonsChunkPlugin({
+    names: ["common", "vendor", "manifest"]
+  })
+  ]
 };
