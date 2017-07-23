@@ -24,7 +24,7 @@ module.exports = {
     template: 'src/index-template.html'
   }),
   new webpack.optimize.CommonsChunkPlugin({
-    names: ["common", "vendor", "manifest"]
+    names: ["vendor", "manifest"]
   })
   ]
 };
